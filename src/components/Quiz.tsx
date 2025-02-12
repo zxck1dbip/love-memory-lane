@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -14,21 +13,21 @@ const Quiz = () => {
   const questions = [
     {
       question: "Какой мой любимый цвет?",
-      options: ["Красный", "Синий", "Зеленый", "Фиолетовый"],
-      correctAnswer: 0,
-      message: "Правильно! Ты так хорошо меня знаешь! 🥰",
-    },
-    {
-      question: "Где было наше первое свидание?",
-      options: ["В парке", "В кафе", "В кино", "В ресторане"],
-      correctAnswer: 1,
-      message: "Да! Это был такой прекрасный день! 💖",
+      options: ["Красный", "Синий", "Зеленый", "Фиолетовый", "Черный"],
+      correctAnswer: 4,
+      message: "Правильно) ",
     },
     {
       question: "Какая моя любимая еда?",
       options: ["Пицца", "Суши", "Паста", "Салат"],
       correctAnswer: 2,
-      message: "Верно! Ты помнишь такие детали! 🌟",
+      message: "Верно)",
+    },
+    {
+      question: "Какой наш любимый фильм?",
+      options: ["Титаник", "Великолепный век", "Ла-Ла Ленд", "Дневник памяти", "Реквием по мечте"],
+      correctAnswer: 4,
+      message: "Да ты права",
     },
   ];
 
