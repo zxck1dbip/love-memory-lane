@@ -1,11 +1,12 @@
 
 import { useState, useEffect } from "react";
-import { Heart, Gift, Calendar } from "lucide-react";
+import { Heart, Gift, Calendar, SparkleIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import MemoryLane from "@/components/MemoryLane";
 import Quiz from "@/components/Quiz";
 import MessageGenerator from "@/components/MessageGenerator";
+import VirtualGift from "@/components/VirtualGift";
 import CountdownTimer from "@/components/CountdownTimer";
 import { useToast } from "@/hooks/use-toast";
 
@@ -42,6 +43,8 @@ const Index = () => {
         return <Quiz />;
       case "messages":
         return <MessageGenerator />;
+      case "gift":
+        return <VirtualGift />;
       default:
         return <MemoryLane />;
     }
@@ -60,7 +63,9 @@ const Index = () => {
           <h1 className="text-4xl md:text-6xl font-bold text-valentine-accent mb-4">
             С любовью для тебя
           </h1>
-          <p className="text-lg text-gray-600">Счастливого Дня Святого Валентина!</p>
+          <p className="text-lg text-gray-600">
+            Каждый момент с тобой наполнен особенным смыслом 💖
+          </p>
         </div>
 
         <CountdownTimer />
@@ -72,7 +77,7 @@ const Index = () => {
             className="glass-card"
           >
             <Calendar className="mr-2 h-4 w-4" />
-            Наши воспоминания
+            Наши прекрасные моменты
           </Button>
           <Button
             variant={activeSection === "quiz" ? "default" : "outline"}
@@ -80,7 +85,7 @@ const Index = () => {
             className="glass-card"
           >
             <Heart className="mr-2 h-4 w-4" />
-            Викторина
+            Проверь свои чувства
           </Button>
           <Button
             variant={activeSection === "messages" ? "default" : "outline"}
@@ -88,7 +93,15 @@ const Index = () => {
             className="glass-card"
           >
             <Gift className="mr-2 h-4 w-4" />
-            Пожелания
+            Слова любви
+          </Button>
+          <Button
+            variant={activeSection === "gift" ? "default" : "outline"}
+            onClick={() => setActiveSection("gift")}
+            className="glass-card"
+          >
+            <SparkleIcon className="mr-2 h-4 w-4" />
+            Особенный подарок
           </Button>
         </div>
 
