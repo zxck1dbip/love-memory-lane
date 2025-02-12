@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Heart, Gift, Calendar, SparkleIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -85,7 +84,7 @@ const Index = () => {
             className="glass-card"
           >
             <Heart className="mr-2 h-4 w-4" />
-            Проверь свои чувства
+            Тест от меня
           </Button>
           <Button
             variant={activeSection === "messages" ? "default" : "outline"}
