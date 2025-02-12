@@ -41,9 +41,9 @@ const MessageGenerator = () => {
             key={currentMessage}
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            className="glass-card p-6 md:p-8 max-w-md mx-auto"
+            className="glass-card p-6 md:p-8 max-w-md mx-auto shadow-lg"
           >
-            <p className="text-lg md:text-xl text-valentine-accent italic">
+            <p className="text-lg md:text-xl text-valentine-accent italic font-medium">
               {currentMessage}
             </p>
           </motion.div>
@@ -53,6 +53,7 @@ const MessageGenerator = () => {
       <motion.div
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
+        className="space-y-4"
       >
         <Button 
           onClick={generateMessage} 
@@ -61,6 +62,9 @@ const MessageGenerator = () => {
           <Heart className="mr-2 h-5 w-5" />
           {currentMessage ? "Другое пожелание" : "Получить пожелание"}
         </Button>
+        <p className="text-sm text-gray-600 animate-pulse">
+          Нажми на кнопку, чтобы увидеть новое пожелание 💝
+        </p>
       </motion.div>
     </div>
   );
