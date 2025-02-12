@@ -3,28 +3,21 @@ import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
 const MemoryLane = () => {
-  // Placeholder memories - you can add your own later
   const memories = [
     {
       id: 1,
       date: "Первая встреча",
-      description: "Добавьте описание вашей первой встречи",
+      description: "Наша первая встреча произошла 26 марта 2023 года",
       imageUrl: "https://via.placeholder.com/400x300",
     },
     {
       id: 2,
-      date: "Первое свидание",
-      description: "Добавьте описание вашего первого свидания",
-      imageUrl: "https://via.placeholder.com/400x300",
-    },
-    {
-      id: 3,
       date: "Особенный момент",
-      description: "Добавьте описание особенного момента",
+      description: "Один из самых ярких моментов для меня — это начало лета 2023 года.",
       imageUrl: "https://via.placeholder.com/400x300",
     },
-  ];
-
+  ]
+  
   return (
     <div className="space-y-8">
       <h2 className="text-3xl font-bold text-center mb-8">Наша история любви</h2>
